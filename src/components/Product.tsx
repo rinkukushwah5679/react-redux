@@ -5,7 +5,6 @@ import {addToCart, removeFromCart} from '../components/services/action';
 
 const Product = (props) => {
 	const cartItems = useSelector((state) => state.reducer)
-	console.warn(cartItems)
 	const [isAdded, setIsAdded] = useState(false)
 
 	const item = props.post

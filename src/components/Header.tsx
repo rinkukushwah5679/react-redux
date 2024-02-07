@@ -5,6 +5,7 @@ import {useSelector} from 'react-redux';
 const Header = () => {
 	const cartDate = useSelector((state)=> state.reducer)
 	const [cartItems, setCartItems] = useState(0);
+  console.warn("*",cartDate)
 	useEffect(() => {
 		setCartItems(cartDate.length)
 	}, [cartDate])
