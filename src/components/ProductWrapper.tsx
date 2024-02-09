@@ -32,7 +32,7 @@ const ProductWrapper = ({navigation}) => {
   ]
   return (
     <View style={styles.container}>
-      <Button title="Go to User list" onPress={() => navigation.navigate("User")} />
+      <Button key={3} title="Go to User list" onPress={() => navigation.navigate("User")} />
       <Header />
       <ScrollView>
         {

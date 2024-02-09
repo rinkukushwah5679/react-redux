@@ -7,17 +7,17 @@ import { getUserList } from '../components/services/action';
 
 const UserList = () => {
 	const dispatch = useDispatch();
-	const posts = useSelector((state) => state.reducer)
+	const posts = useSelector((state) => state.reducer.userData)
 
 	useEffect(() => {
 		dispatch(getUserList())
 	}, [])
-	console.warn("***", posts)
+	// console.warn("***", posts)
 	return (
 		<View style={styles.container}>
 			{
 				posts.length?
-				posts[0].map((post) =>(<View>
+				posts.map((post) =>(<View>
 					<Text style={{fontSize: 18}}>{post.title}</Text>
 				</View>))
 				:null
